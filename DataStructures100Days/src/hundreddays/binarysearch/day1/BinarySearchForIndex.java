@@ -1,4 +1,4 @@
-package hundreddays.binarysearch;
+package hundreddays.binarysearch.day1;
 
 public class BinarySearchForIndex {
 

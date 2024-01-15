@@ -1,4 +1,4 @@
-package hundreddays.binarysearch;
+package hundreddays.binarysearch.day1;
 
 import java.util.Arrays;
 

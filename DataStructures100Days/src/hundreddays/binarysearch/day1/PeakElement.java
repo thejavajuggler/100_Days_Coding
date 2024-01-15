@@ -1,4 +1,4 @@
-package hundreddays.binarysearch;
+package hundreddays.binarysearch.day1;
 
 public class PeakElement {
     /**
@@ -19,8 +19,12 @@ public class PeakElement {
 
     }
 
+
+
     private static int findPeakElement(int[] A) {
         int N = A.length;
+        if (N == 1)
+            return A[0];
         if (A[0] > A[1])
             return A[0];
         if (A[N - 1] > A[N - 2])
@@ -28,9 +32,9 @@ public class PeakElement {
         int l = 0, r = N - 1;
         while (l <= r) {
             int mid = l + (r - l) / 2;
-            if (A[mid - 1] < A[mid] && A[mid + 1] < A[mid])
+            if (A[mid - 1] <= A[mid] && A[mid + 1] <= A[mid])
                 return A[mid];
-            else if (A[mid + 1] > A[mid] && A[mid - 1] < A[mid]) {
+            else if (A[mid + 1] >= A[mid] && A[mid - 1] <= A[mid]) {
                 l = mid + 1;
             }
             else
