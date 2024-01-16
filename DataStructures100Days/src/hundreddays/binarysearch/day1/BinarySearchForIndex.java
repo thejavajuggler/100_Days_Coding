@@ -28,9 +28,8 @@ public class BinarySearchForIndex {
 
         int l = 1;
         int r = N - 2;
-        int mid = (l + r) / 2;
         while (l <= r) {
-            mid = (l + r) / 2;
+            int mid = (l + r) / 2;
             if (A[mid] == B)
                 return mid;
             else if (A[mid] > B) {
